@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://samworks.cyberdeep.qzz.io/sitemap.xml
