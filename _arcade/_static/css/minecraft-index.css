@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    background: radial-gradient(ellipse at bottom, #0b1220 0%, #020617 100%);
+    color: #f8fafc;
+    overflow: hidden;
+
+    /* global readability */
+    text-shadow: 0 0 6px rgba(255,255,255,0.15);
+}
+
+/* 🎮 BACKGROUND FIXED */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -3;
+}
+
+/* 📦 SCROLLABLE UI LAYER */
+.ui-layer {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;
+    text-align: center;
+    padding-bottom: 40px;
+
+    scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+.ui-layer::-webkit-scrollbar {
+    width: 6px;
+}
+.ui-layer::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+}
+
+/* HEADER */
+header {
+    padding: 20px;
+    background: rgba(2,6,23,0.65);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* 🔥 TITLE */
+.title {
+    font-size: 28px;
+    background: linear-gradient(90deg,#f97316,#facc15,#4ade80);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+        0 0 10px rgba(250,204,21,0.4),
+        0 0 20px rgba(249,115,22,0.3);
+}
+
+/* 🔥 TORCH */
+.torch {
+    display: inline-block;
+    width: 12px;
+    height: 30px;
+    background: #78350f;
+    border-radius: 3px;
+    position: relative;
+    margin-right: 8px;
+}
+
+.torch::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -4px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle, #facc15, #f97316, transparent);
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+/* 🌙 MOON */
+.moon {
+    position: fixed;
+    top: 40px;
+    right: 60px;
+    width: 80px;
+    height: 80px;
+    background: radial-gradient(circle, #f8fafc, #cbd5f5);
+    border-radius: 50%;
+    box-shadow:
+        0 0 60px rgba(255,255,255,0.25),
+        0 0 120px rgba(255,255,255,0.1);
+    z-index: -2;
+}
+
+/* CARD */
+.card {
+    margin: 40px auto;
+    max-width: 420px;
+    padding: 25px;
+    border-radius: 18px;
+
+    background: rgba(2,6,23,0.85);
+    border: 1px solid rgba(255,255,255,0.08);
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.6),
+        inset 0 0 20px rgba(255,255,255,0.02);
+
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+/* Card scrollbar */
+.card::-webkit-scrollbar {
+    width: 5px;
+}
+.card::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 10px;
+}
+
+/* HEADINGS */
+h2 {
+    color: #4ade80;
+    text-shadow: 0 0 8px rgba(74,222,128,0.4);
+}
+
+/* TEXT */
+.desc {
+    font-size: 12px;
+    opacity: 0.95;
+    color: #e2e8f0;
+}
+
+.desc a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* BUTTONS */
+button {
+    width: 100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius: 14px;
+    border: none;
+    cursor: pointer;
+
+    font-family: 'Minecraft', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.1);
+}
+
+/* Button styles */
+.download-btn {
+    background: linear-gradient(135deg,#16a34a,#22c55e);
+    box-shadow: 0 0 15px rgba(34,197,94,0.4);
+}
+
+.join-btn {
+    background: linear-gradient(135deg,#0284c7,#0ea5e9);
+    box-shadow: 0 0 15px rgba(14,165,233,0.4);
+}
+
+.instagram {
+    background: linear-gradient(135deg,#f58529,#dd2a7b,#8134af,#515bd4);
+    color: white;
+}
+
+.snapchat {
+    background: #fffc00;
+    color: black;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 30px;
+    font-size: 11px;
+    opacity: 0.7;
+    text-shadow: 0 0 4px rgba(255,255,255,0.1);
+}

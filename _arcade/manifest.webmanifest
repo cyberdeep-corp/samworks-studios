@@ -1,0 +1,22 @@
+{
+  "id": "./",
+  "name": "SamWorks Arcade",
+  "short_name": "SW Arcade",
+  "description": "Browser games, Minecraft community gaming, and guides from SamWorks Studios.",
+  "lang": "en",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#101114",
+  "theme_color": "#101114",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "./_static/images/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
