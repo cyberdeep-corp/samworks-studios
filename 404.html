@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Page Not Found | SamWorks Studios</title><meta name="description" content="The page you requested could not be found."><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#f4f6f1">
+  <script>
+    if (window.location.pathname === "/arcade" || window.location.pathname.startsWith("/arcade/")) {
+      const missingPath = window.location.pathname + window.location.search + window.location.hash;
+      window.location.replace("/arcade/404.html?path=" + encodeURIComponent(missingPath));
+    }
+  </script>
   <link rel="manifest" href="/site.webmanifest"><link rel="stylesheet" href="assets/css/style.css"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
