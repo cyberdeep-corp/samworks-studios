@@ -13,7 +13,7 @@
   "categories": ["games", "entertainment"],
   "icons": [
     {
-      "src": "./_static/images/icon.svg",
+      "src": "/arcade/_static/images/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
