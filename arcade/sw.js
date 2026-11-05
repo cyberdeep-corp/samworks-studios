@@ -9,10 +9,10 @@ const APP_SHELL = [
     "./Minecraft/servers/torch-smp.html",
     "./docs/terms-and-conditions.html",
     "./manifest.webmanifest",
-    "./_static/css/index.css",
-    "./_static/js/app.js",
-    "./_static/js/games.js",
-    "./_static/images/icon.svg"
+    ".static/css/index.css",
+    ".static/js/app.js",
+    ".static/js/games.js",
+    ".static/images/icon.svg"
 ];
 
 self.addEventListener("install", (event) => {
