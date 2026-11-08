@@ -1,18 +1,20 @@
 "use strict";
 
-const CACHE_NAME = "samworks-arcade-v2";
+const CACHE_NAME = "samworks-arcade-v3";
 const APP_SHELL = [
     "./",
     "./index.html",
     "./games.html",
-    "./Minecraft/minecraft-versions.html",
-    "./Minecraft/servers/torch-smp.html",
+    "./minecraft/minecraft-versions.html",
+    "./minecraft/servers/torch-smp.html",
     "./docs/terms-and-conditions.html",
     "./manifest.webmanifest",
-    ".static/css/index.css",
-    ".static/js/app.js",
-    ".static/js/games.js",
-    ".static/images/icon.svg"
+    "./assets/css/index.css",
+    "./assets/js/app.js",
+    "./assets/js/games.js",
+    "./assets/Arcade-NBG.png",
+    "./assets/Arcade-Emblem-NBG.png",
+    "./assets/Arcade.png"
 ];
 
 self.addEventListener("install", (event) => {

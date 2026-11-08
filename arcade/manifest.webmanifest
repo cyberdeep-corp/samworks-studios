@@ -13,9 +13,9 @@
   "categories": ["games", "entertainment"],
   "icons": [
     {
-      "src": "/arcadestatic/images/icon.svg",
-      "sizes": "any",
-      "type": "image/svg+xml",
+      "src": "assets/Arcade-NBG.png",
+      "sizes": "1272x1237",
+      "type": "image/png",
       "purpose": "any"
     }
   ]

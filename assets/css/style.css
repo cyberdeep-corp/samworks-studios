@@ -543,6 +543,27 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .project-tile p { max-width: 460px; margin: 9px 0 0; color: #586783; font-size: 13px; line-height: 1.65; }
 .project-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 20px; }
 .project-tags span { padding: 5px 8px; border: 1px solid rgba(17,26,54,.16); color: #586783; font: 9px "IBM Plex Mono", Consolas, monospace; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+.portfolio-card { display: flex; min-height: 100%; flex-direction: column; align-items: flex-start; padding: 25px; border: 1px solid var(--line); background: rgba(255,255,255,.82); transition: border-color .2s ease, transform .2s ease; }
+.portfolio-card:hover { border-color: #b6c8ee; transform: translateY(-2px); }
+.portfolio-card-top { display: flex; width: 100%; min-height: 76px; align-items: center; gap: 17px; }
+#websites .portfolio-card-top { min-height: 116px; padding: 10px 16px; background: var(--portfolio-logo-bg); }
+.portfolio-logo { display: grid; width: 76px; height: 76px; flex: 0 0 76px; place-items: center; overflow: hidden; border: 1px solid var(--line); background: #fff; }
+.portfolio-logo img { width: 100%; height: 100%; padding: 7px; object-fit: contain; }
+.portfolio-logo-image { display: block; padding: 7px; object-fit: contain; }
+#websites .portfolio-logo-image { width: min(100%, 280px); height: 96px; flex: 0 1 280px; padding: 0; border: 0; background: transparent; object-position: left center; }
+#websites .portfolio-card { --portfolio-logo-bg: #e6f0ff; --portfolio-card-bg: #f7faff; --portfolio-border: #b8d0fa; border-color: var(--portfolio-border); background: var(--portfolio-card-bg); }
+#websites .portfolio-card:nth-child(2) { --portfolio-logo-bg: #e8f0ff; --portfolio-card-bg: #f7f9ff; --portfolio-border: #c4d2f2; }
+#websites .portfolio-card:nth-child(3) { --portfolio-logo-bg: #efffdc; --portfolio-card-bg: #fbfff5; --portfolio-border: #cfe7ad; }
+#websites .portfolio-card:nth-child(4) { --portfolio-logo-bg: #eaf4ff; --portfolio-card-bg: #f8fbff; --portfolio-border: #c4d9ea; }
+#websites .portfolio-card .project-tags span { border-color: var(--portfolio-border); }
+#websites .portfolio-card .portfolio-link { color: var(--accent-dark); }
+.portfolio-kind { margin: 0; color: var(--accent-dark); font: 10px "IBM Plex Mono", Consolas, monospace; line-height: 1.5; }
+.portfolio-card h3 { margin: 22px 0 0; font-size: 21px; font-weight: 600; }
+.portfolio-card > p:not(.portfolio-kind) { margin: 9px 0 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+.portfolio-card .project-tags { margin-top: 17px; }
+.portfolio-card .portfolio-link { display: inline-flex; align-items: center; gap: 9px; margin-top: auto; padding-top: 22px; color: var(--forest); font-size: 12px; font-weight: 700; }
+.portfolio-card .portfolio-link:hover { color: var(--accent-dark); }
 .note-panel { padding: 19px 22px; border-left: 3px solid var(--accent); background: #fff; color: #586783; font-size: 12px; line-height: 1.6; }
 .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
 .about-grid h2 { margin: 0; font-size: 34px; font-weight: 600; line-height: 1.13; }
@@ -618,7 +639,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-copy > p:not(.eyebrow) { font-size: 15px; }
   .hero-actions { align-items: stretch; flex-direction: column; }
   .hero-actions .button { width: 100%; }
-  .service-grid, .capability-grid, .project-grid { grid-template-columns: 1fr; }
+  .service-grid, .capability-grid, .project-grid, .portfolio-grid { grid-template-columns: 1fr; }
   .service-item { min-height: auto; }
   .contact-form { grid-template-columns: 1fr; padding: 17px; }
   .form-field.full { grid-column: auto; }

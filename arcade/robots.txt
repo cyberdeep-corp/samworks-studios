@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://torch-smp.gamer.gd/sitemap.xml
+Sitemap: https://samworks.cyberdeep.qzz.io/arcade/sitemap.xml
