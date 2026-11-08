@@ -553,9 +553,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .portfolio-logo-image { display: block; padding: 7px; object-fit: contain; }
 #websites .portfolio-logo-image { width: min(100%, 280px); height: 96px; flex: 0 1 280px; padding: 0; border: 0; background: transparent; object-position: left center; }
 #websites .portfolio-card { --portfolio-logo-bg: #e6f0ff; --portfolio-card-bg: #f7faff; --portfolio-border: #b8d0fa; border-color: var(--portfolio-border); background: var(--portfolio-card-bg); }
+#websites .portfolio-card:nth-child(1) { --portfolio-logo-bg: #183665; }
 #websites .portfolio-card:nth-child(2) { --portfolio-logo-bg: #e8f0ff; --portfolio-card-bg: #f7f9ff; --portfolio-border: #c4d2f2; }
 #websites .portfolio-card:nth-child(3) { --portfolio-logo-bg: #efffdc; --portfolio-card-bg: #fbfff5; --portfolio-border: #cfe7ad; }
-#websites .portfolio-card:nth-child(4) { --portfolio-logo-bg: #eaf4ff; --portfolio-card-bg: #f8fbff; --portfolio-border: #c4d9ea; }
+#websites .portfolio-card:nth-child(4) { --portfolio-logo-bg: #1b3d4a; --portfolio-card-bg: #f8fbff; --portfolio-border: #c4d9ea; }
 #websites .portfolio-card .project-tags span { border-color: var(--portfolio-border); }
 #websites .portfolio-card .portfolio-link { color: var(--accent-dark); }
 .portfolio-kind { margin: 0; color: var(--accent-dark); font: 10px "IBM Plex Mono", Consolas, monospace; line-height: 1.5; }
