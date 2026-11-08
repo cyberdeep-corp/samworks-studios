@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
         '',
         String(fields.get('message'))
       ].join('\n');
-      const mailto = `mailto:studio@cyberdeep.qzz.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      const mailto = `mailto:contact@samworks.cyberdeep.qzz.io?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
       window.location.href = mailto;
       const feedback = form.querySelector('.form-feedback');
       if (feedback) feedback.textContent = 'Your email app should open with the inquiry ready to send.';
