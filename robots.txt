@@ -1,6 +1,5 @@
 User-agent: *
 Allow: /
 Disallow: /assets/
-Disallow: /arcade/
 
 Sitemap: https://samworks.cyberdeep.qzz.io/sitemap.xml
