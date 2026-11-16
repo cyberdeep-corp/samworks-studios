@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="assets/css/index.css">
     <title>Game</title>
     <style>
-        /* Optional: Makes the iframe fill the screen nicely */
         body, html {
             margin: 0;
             padding: 0;
@@ -36,9 +35,40 @@
         const target = urlParams.get('target');
 
         if (target) {
+            // Set a clean temporary title while the game loads
+            const cleanHostname = target.replace(/^https?:\/\//, '').split('/')[0];
+            document.title = `${cleanHostname} — SamWorks Arcade`;
+
             const iframe = document.createElement('iframe');
             iframe.src = `/arcade/embed?target=${encodeURIComponent(target)}`;
             iframe.allowFullscreen = true;
+
+            iframe.addEventListener('load', () => {
+                try {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    if (!iframeDoc) return;
+
+                    const syncTitle = () => {
+                        const embeddedTitle = iframeDoc.title?.trim();
+                        if (embeddedTitle) {
+                            document.title = embeddedTitle;
+                        }
+                    };
+
+                    // Sync immediately upon initial load
+                    syncTitle();
+
+                    // Watch for dynamic title changes inside the game
+                    const titleEl = iframeDoc.querySelector('title');
+                    if (titleEl) {
+                        const observer = new MutationObserver(syncTitle);
+                        observer.observe(titleEl, { childList: true });
+                    }
+                } catch (err) {
+                    console.warn('Could not read embedded page title:', err);
+                }
+            });
+
             document.getElementById('embed-container').appendChild(iframe);
         }
     </script>
