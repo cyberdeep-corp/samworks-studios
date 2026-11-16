@@ -37,7 +37,7 @@
 
         if (target) {
             const iframe = document.createElement('iframe');
-            iframe.src = `/embed?${encodeURIComponent(target)}`;
+            iframe.src = `/embed?target=${encodeURIComponent(target)}`;
             iframe.allowFullscreen = true;
             document.getElementById('embed-container').appendChild(iframe);
         }
